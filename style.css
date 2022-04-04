@@ -5,7 +5,7 @@
 }
 
 .wrapper {
-  height: 100vh;
+  min-height: 100vh;
   background-color: #161a1e;
   display: flex;
   flex-direction: column;
@@ -119,6 +119,7 @@
 }
 
 .results-field {
+  padding: 40px 0;
   display: flex;
   justify-content: center;
   min-height: 100px;
@@ -128,7 +129,7 @@
   display: grid;
   grid-template-areas: "res-title res-area" "key-title key-area";
   grid-template-columns: 25% 75%;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr;
   grid-row-gap: 40px;
 }
 
@@ -164,11 +165,36 @@
 .encrypt__result,
 .encrypt__key,
 .decrypt__result {
+  overflow-wrap: break-word;
   padding: 0 10px;
   font-size: 20px;
   color: white;
   width: 250px;
-  border-bottom: 2px solid rgba(187, 53, 192, 0.5);
+  border-bottom: 2px solid rgba(187, 53, 192, 0.4);
   background-color: #1e2026;
+}
+
+/* ---------- footer ---------- */
+.footer {
+  display: flex;
+  height: 70px;
+  justify-content: space-evenly;
+  align-items: center;
+  color: #fcd535;
+  font-size: 18px;
+}
+
+.github {
+  position: relative;
+  text-decoration: none;
+  color: #fcd535;
+}
+
+.github-logo {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  top: -10px;
+  left: -45px;
 }
 /*# sourceMappingURL=style.css.map */
