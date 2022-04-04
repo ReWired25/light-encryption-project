@@ -41,11 +41,27 @@
   transition: 1s;
 }
 
+@media (min-width: 1800px) {
+  .logo {
+    height: 300px;
+  }
+  .logo::before {
+    width: 140px;
+    height: 170px;
+  }
+}
+
 .logo__img {
   position: relative;
   height: 150px;
   transition: 1s;
   z-index: 1;
+}
+
+@media (min-width: 1800px) {
+  .logo__img {
+    height: 220px;
+  }
 }
 
 /* ---------- project field, inputs, results ---------- */
@@ -72,10 +88,29 @@
   transition: 0.5s;
 }
 
+@media (min-width: 1800px) {
+  .encrypt__input,
+  .decrypt__input,
+  .decrypt__key {
+    width: 500px;
+    height: 70px;
+    padding: 10px;
+    font-size: 25px;
+  }
+}
+
 .encrypt__input::placeholder,
 .decrypt__input::placeholder,
 .decrypt__key::placeholder {
   font-size: 15px;
+}
+
+@media (min-width: 1800px) {
+  .encrypt__input::placeholder,
+  .decrypt__input::placeholder,
+  .decrypt__key::placeholder {
+    font-size: 25px;
+  }
 }
 
 .encrypt__input:focus,
@@ -91,13 +126,15 @@
   width: 200px;
 }
 
-.encrypt__button,
-.decrypt__button {
-  margin-top: 20px;
+@media (min-width: 1800px) {
+  .decrypt__key {
+    width: 300px;
+  }
 }
 
 .encrypt__button,
 .decrypt__button {
+  margin-top: 20px;
   width: 120px;
   height: 45px;
   background-color: #1e2026;
@@ -110,6 +147,15 @@
   transition: 0.5s;
 }
 
+@media (min-width: 1800px) {
+  .encrypt__button,
+  .decrypt__button {
+    width: 200px;
+    height: 80px;
+    font-size: 25px;
+  }
+}
+
 .encrypt__button:hover,
 .decrypt__button:hover {
   box-shadow: 0 0 10px 1.5px #12cb68;
@@ -119,7 +165,7 @@
 }
 
 .results-field {
-  padding: 40px 0;
+  padding: 50px 0;
   display: flex;
   justify-content: center;
   min-height: 100px;
@@ -139,10 +185,17 @@
   padding: 0 20px;
 }
 
+@media (min-width: 1800px) {
+  .encrypt-results,
+  .decrypt-results {
+    width: 500px;
+  }
+}
+
 .decrypt-results {
   display: grid;
   grid-template-columns: 25% 75%;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr 20px;
   grid-row-gap: 40px;
 }
 
@@ -152,6 +205,14 @@
   font-size: 20px;
   letter-spacing: 1.5px;
   color: #12cb68;
+}
+
+@media (min-width: 1800px) {
+  .result__title--encrypt,
+  .result__title--decrypt,
+  .key__title {
+    font-size: 35px;
+  }
 }
 
 .result__title--encrypt {
@@ -174,6 +235,14 @@
   background-color: #1e2026;
 }
 
+@media (min-width: 1800px) {
+  .encrypt__result,
+  .encrypt__key,
+  .decrypt__result {
+    width: 300px;
+  }
+}
+
 /* ---------- footer ---------- */
 .footer {
   display: flex;
@@ -184,10 +253,22 @@
   font-size: 18px;
 }
 
+@media (min-width: 1800px) {
+  .footer {
+    font-size: 35px;
+  }
+}
+
 .github {
   position: relative;
   text-decoration: none;
   color: #fcd535;
+  transition: 0.5s;
+}
+
+.github:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
 }
 
 .github-logo {
@@ -196,5 +277,14 @@
   height: 35px;
   top: -10px;
   left: -45px;
+}
+
+@media (min-width: 1800px) {
+  .github-logo {
+    width: 50px;
+    height: 50px;
+    top: -10px;
+    left: -70px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
