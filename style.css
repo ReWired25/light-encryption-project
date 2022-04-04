@@ -7,6 +7,9 @@
 .wrapper {
   height: 100vh;
   background-color: #161a1e;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 /* ---------- logo ---------- */
@@ -53,17 +56,35 @@
 
 .encrypt,
 .decrypt {
-  padding: 20px;
+  padding: 0 20px;
 }
 
 .encrypt__input,
 .decrypt__input,
 .decrypt__key {
   display: block;
-  width: 300px;
-  height: 35px;
+  width: 350px;
+  height: 40px;
   padding: 5px;
   margin-top: 20px;
+  border: 2px solid white;
+  font-size: 15px;
+  transition: 0.5s;
+}
+
+.encrypt__input::placeholder,
+.decrypt__input::placeholder,
+.decrypt__key::placeholder {
+  font-size: 15px;
+}
+
+.encrypt__input:focus,
+.decrypt__input:focus,
+.decrypt__key:focus {
+  outline: 1px solid white;
+  border: 2px solid white;
+  box-shadow: 0 0 5px 1px white;
+  transition: 0.5s;
 }
 
 .decrypt__key {
@@ -71,10 +92,83 @@
 }
 
 .encrypt__button,
+.decrypt__button {
+  margin-top: 20px;
+}
+
+.encrypt__button,
+.decrypt__button {
+  width: 120px;
+  height: 45px;
+  background-color: #1e2026;
+  border-style: none;
+  border-bottom: 2px solid #12cb68;
+  color: #12cb68;
+  font-size: 15px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+
+.encrypt__button:hover,
+.decrypt__button:hover {
+  box-shadow: 0 0 10px 1.5px #12cb68;
+  transform: scale(1.05);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.results-field {
+  display: flex;
+  justify-content: center;
+  min-height: 100px;
+}
+
+.encrypt-results {
+  display: grid;
+  grid-template-areas: "res-title res-area" "key-title key-area";
+  grid-template-columns: 25% 75%;
+  grid-template-rows: 1fr 1fr;
+  grid-row-gap: 40px;
+}
+
+.encrypt-results,
+.decrypt-results {
+  width: 390px;
+  padding: 0 20px;
+}
+
+.decrypt-results {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  grid-template-rows: 1fr 1fr;
+  grid-row-gap: 40px;
+}
+
+.result__title--encrypt,
+.result__title--decrypt,
+.key__title {
+  font-size: 20px;
+  letter-spacing: 1.5px;
+  color: #12cb68;
+}
+
+.result__title--encrypt {
+  grid-area: res-title;
+}
+
+.key__title {
+  grid-area: key-title;
+}
+
 .encrypt__result,
 .encrypt__key,
-.decrypt__button,
 .decrypt__result {
-  margin-top: 20px;
+  padding: 0 10px;
+  font-size: 20px;
+  color: white;
+  width: 250px;
+  border-bottom: 2px solid rgba(187, 53, 192, 0.5);
+  background-color: #1e2026;
 }
 /*# sourceMappingURL=style.css.map */

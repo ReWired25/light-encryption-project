@@ -12,20 +12,33 @@
         <header class="logo">
             <img class="logo__img" src="assets/enc-logo-one.svg" alt="logo">
         </header>
-        <main class="encrypt-field">
+        <div class="encrypt-field">
             <div class="encrypt">
-                <input class="encrypt__input" type="text">
+                <input class="encrypt__input" type="text" placeholder="Enter original text">
                 <button class="encrypt__button">Encrypt</button>
-                <p class="encrypt__result">Result</p>
-                <p class="encrypt__key">Key</p>
             </div>
             <div class="decrypt">
-                <input class="decrypt__input" type="text">
-                <input class="decrypt__key" type="text">
+                <input class="decrypt__input" type="text" placeholder="Enter encrypted text ">
+                <input class="decrypt__key" type="text" placeholder="Enter your key">
                 <button class="decrypt__button">Decrypt</button>
-                <p class="decrypt__result">Result</p>
             </div>
-        </main>
+        </div>
+        <div class="results-field">
+            <div class="encrypt-results">
+                <p class="result__title--encrypt">Result</p>
+                <p class="key__title">Key</p>
+                <p class="encrypt__result"></p>
+                <p class="encrypt__key"></p>
+            </div>
+            <div class="decrypt-results">
+                <p class="result__title--decrypt">Result</p>
+                <p class="decrypt__result"></p>
+            </div>
+        </div>
+        <footer class="footer">
+            <p class="year">2022</p>
+            <p class="github"><img src="#" alt="github-logo">ReWired25</p>
+        </footer>
     </div>
     <script src="script.js"></script>
 </body>
