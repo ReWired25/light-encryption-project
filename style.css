@@ -1,7 +1,80 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  height: 100vh;
+  background-color: #161a1e;
+}
+
+/* ---------- logo ---------- */
+.logo {
+  position: relative;
+  height: 230px;
+  text-align: center;
+  padding: 40px;
+}
+
+.logo::before {
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 100px;
+  transform: translate(25px, 20px);
+  border: 5px solid #fcd535;
+  box-shadow: 0px 0px 40px 10px #fcd535;
+  transition: 1s;
+}
+
+.logo:hover::before {
+  box-shadow: 0px 0px 70px 10px #fcd535;
+  transition: 1s;
+}
+
+.logo:hover .logo__img {
+  transform: scale(1.1);
+  transition: 1s;
+}
+
+.logo__img {
+  position: relative;
+  height: 150px;
+  transition: 1s;
+  z-index: 1;
+}
+
+/* ---------- project field, inputs, results ---------- */
+.encrypt-field {
+  display: flex;
+  justify-content: center;
+}
+
+.encrypt,
+.decrypt {
+  padding: 20px;
+}
+
+.encrypt__input,
+.decrypt__input,
+.decrypt__key {
+  display: block;
+  width: 300px;
+  height: 35px;
+  padding: 5px;
+  margin-top: 20px;
+}
+
+.decrypt__key {
+  width: 200px;
+}
+
+.encrypt__button,
+.encrypt__result,
+.encrypt__key,
+.decrypt__button,
+.decrypt__result {
+  margin-top: 20px;
 }
 /*# sourceMappingURL=style.css.map */
