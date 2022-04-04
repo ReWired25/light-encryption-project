@@ -13,26 +13,28 @@
             <img class="logo__img" src="assets/enc-logo.svg" alt="logo">
         </header>
         <div class="encrypt-field">
-            <div class="encrypt">
-                <input class="encrypt__input" type="text" placeholder="Enter original text">
-                <button class="encrypt__button">Encrypt</button>
+            <div class="encrypt-inputs-results">
+                <div class="encrypt-areas">
+                    <input class="encrypt__input" type="text" placeholder="Enter original text">
+                    <button class="encrypt__button">Encrypt</button>
+                </div>
+                <div class="encrypt-results">
+                    <p class="result__title--encrypt">Result</p>
+                    <p class="key__title">Key</p>
+                    <p class="encrypt__result"></p>
+                    <p class="encrypt__key"></p>
+                </div>
             </div>
-            <div class="decrypt">
-                <input class="decrypt__input" type="text" placeholder="Enter encrypted text ">
-                <input class="decrypt__key" type="text" placeholder="Enter your key">
-                <button class="decrypt__button">Decrypt</button>
-            </div>
-        </div>
-        <div class="results-field">
-            <div class="encrypt-results">
-                <p class="result__title--encrypt">Result</p>
-                <p class="key__title">Key</p>
-                <p class="encrypt__result"></p>
-                <p class="encrypt__key"></p>
-            </div>
-            <div class="decrypt-results">
-                <p class="result__title--decrypt">Result</p>
-                <p class="decrypt__result"></p>
+            <div class="decrypt-inputs-results">
+                <div class="decrypt-areas">
+                    <input class="decrypt__input" type="text" placeholder="Enter encrypted text ">
+                    <input class="decrypt__key" type="text" placeholder="Enter your key">
+                    <button class="decrypt__button">Decrypt</button>
+                </div>
+                <div class="decrypt-results">
+                    <p class="result__title--decrypt">Result</p>
+                    <p class="decrypt__result"></p>
+                </div>
             </div>
         </div>
         <footer class="footer">

@@ -65,11 +65,25 @@ $decoration-color: #12cb68;
 .encrypt-field {
     display: flex;
     justify-content: center;
+    @media (max-width: 800px) {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
-.encrypt,
-.decrypt {
+.encrypt-areas,
+.decrypt-areas {
     padding: 0 20px;
+    height: 185px;
+    @media (min-width: 1800px){
+        height: 280px;
+    }
+}
+
+.encrypt-areas {
+    @media (max-width: 800px) {
+        height: 130px;
+    }
 }
 
 .encrypt__input,
@@ -88,6 +102,9 @@ $decoration-color: #12cb68;
         height: 70px;
         padding: 10px;
         font-size: 25px;
+    }
+    @media (max-width: 450px) {
+        width: 250px;
     }
 }
 
@@ -144,13 +161,6 @@ $decoration-color: #12cb68;
     cursor: pointer;
 }
 
-.results-field {
-    padding: 50px 0;
-    display: flex;
-    justify-content: center;
-    min-height: 100px;
-}
-
 .encrypt-results {
     display: grid;
     grid-template-areas:
@@ -161,20 +171,25 @@ $decoration-color: #12cb68;
     grid-row-gap: 40px;
 }
 
-.encrypt-results,
-.decrypt-results {
-    width: 390px;
-    padding: 0 20px;
-    @media (min-width: 1800px){
-        width: 500px;
-    }
-}
-
 .decrypt-results {
     display: grid;
     grid-template-columns: 25% 75%;
     grid-template-rows: 1fr 20px;
     grid-row-gap: 40px;
+}
+
+.encrypt-results,
+.decrypt-results {
+    width: 390px;
+    padding: 20px;
+    @media (min-width: 1800px){
+        padding: 40px 20px;
+        width: 500px;
+    }
+    @media (max-width: 450px) {
+        width: 280px;
+        grid-template-columns: 30% 70%;
+    }
 }
 
 .result__title--encrypt,
@@ -208,6 +223,9 @@ $decoration-color: #12cb68;
     background-color: #1e2026;
     @media (min-width: 1800px){
         width: 300px;
+    }
+    @media (max-width: 450px) {
+        width: 170px;
     }
 }
 
